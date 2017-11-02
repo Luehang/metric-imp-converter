@@ -1,0 +1,10 @@
+doctype html
+html(lang="en")
+    h1 Metric and Imperial Converter
+    form(action='/api/convert', method='post')
+      input(type='text', placeholder='number and unit' name='number')
+      button(type='submit') Submit
+    if message
+      h3 #{message}
+    if converter
+      p #{converter}
